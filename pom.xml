@@ -11,9 +11,9 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <serenity.version>2.1.13</serenity.version>
-        <serenity.maven.version>2.1.13</serenity.maven.version>
-        <serenity.cucumber.version>2.1.2</serenity.cucumber.version>
+        <serenity.version>2.0.91</serenity.version>
+        <serenity.maven.version>2.0.91</serenity.maven.version>
+        <serenity.cucumber.version>1.0.30</serenity.cucumber.version>
         <cucumber.version>4.8.0</cucumber.version>
         <encoding>UTF-8</encoding>
         <tags></tags>
@@ -98,12 +98,7 @@
             <version>${serenity.cucumber.version}</version>
             <scope>test</scope>
         </dependency>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.12</version>
-            <scope>test</scope>
-        </dependency>
+
         <dependency>
             <groupId>org.assertj</groupId>
             <artifactId>assertj-core</artifactId>
