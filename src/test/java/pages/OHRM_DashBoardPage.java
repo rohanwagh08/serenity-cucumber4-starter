@@ -10,9 +10,7 @@ public class OHRM_DashBoardPage extends PageObject {
     public void vertify_valid_login(){
         Assert.assertTrue(getDriver().getCurrentUrl().contains("dashboard"));
     }
-    public void vertify_invalid_login(){
-        Assert.assertTrue($(By.id("spanMessage")).containsText("Invalid credentials"));
-    }
+
     public void navigate_to_Employee_List_Page(){
         Actions act = new Actions(getDriver());
         act.moveToElement($(By.id("menu_pim_viewPimModule")))

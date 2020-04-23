@@ -44,11 +44,12 @@ public class OHRM_StepDefinitions {
     @Then("user should be able to see Invalid credentials alert")
     public void user_should_be_able_to_see_Invalid_credentials_alert() {
 
+
     }
 
 
-    @Given("User is logedin to application with {string} as username and {string} as Password")
-    public void userIsLogedinToApplicationWithAsUsernameAndAdminAsPassword(String username, String password) {
+    @Given("User is logged in to application with {string} as username and {string} as Password")
+    public void userIsLoggedInToApplicationWithAsUsernameAndAsPassword(String username, String password) {
         lp.open_application();
         lp.enter_username(username);
         lp.enter_password(password);
@@ -70,4 +71,5 @@ public class OHRM_StepDefinitions {
         Assert.assertTrue(true);
 
     }
+
 }

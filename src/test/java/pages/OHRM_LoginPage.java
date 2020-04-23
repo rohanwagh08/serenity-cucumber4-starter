@@ -1,6 +1,7 @@
 package pages;
 
 import net.serenitybdd.core.pages.PageObject;
+import org.junit.Assert;
 import org.openqa.selenium.By;
 
 public class OHRM_LoginPage extends PageObject {
@@ -15,5 +16,9 @@ public class OHRM_LoginPage extends PageObject {
     public void click_submit(){
 
         $(By.id("btnLogin")).click();
+    }
+
+    public void vertify_invalid_login(){
+        Assert.assertTrue($(By.id("spanMessage")).containsText("Invalid credentials"));
     }
 }

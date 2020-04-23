@@ -7,22 +7,27 @@ import pages.OHRM_LoginPage;
 public class LoginPage {
     OHRM_LoginPage lp;
 
-    @Step
+    @Step("Open Orange HRM Application")
     public void open_application(){
         lp.open();
     }
-    @Step
+    @Step("Enter {String} as username")
     public void enter_username(String username){
         lp.enter_username(username);
 
     }
-    @Step
+    @Step("Enter {String} as password")
     public void enter_password(String password){
         lp.enter_password(password);
     }
-    @Step
+    @Step("Click on Submit")
     public void click_submit(){
         lp.click_submit();
+    }
+
+    @Step("Verify invalid login")
+    public void check_login(){
+        lp.vertify_invalid_login();
     }
 
 }
