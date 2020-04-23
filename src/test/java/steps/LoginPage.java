@@ -1,8 +1,8 @@
-package pages;
+package steps;
 
 
 import net.thucydides.core.annotations.Step;
-import steps.OHRM_LoginPage;
+import pages.OHRM_LoginPage;
 
 public class LoginPage {
     OHRM_LoginPage lp;
