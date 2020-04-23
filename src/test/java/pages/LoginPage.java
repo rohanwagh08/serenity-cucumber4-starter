@@ -2,7 +2,7 @@ package pages;
 
 
 import net.thucydides.core.annotations.Step;
-import org.openqa.selenium.By;
+import steps.OHRM_LoginPage;
 
 public class LoginPage {
     OHRM_LoginPage lp;

@@ -1,6 +1,7 @@
 package pages;
 
 import net.thucydides.core.annotations.Step;
+import steps.OHRM_DashBoardPage;
 
 public class DashBoardPage {
 
