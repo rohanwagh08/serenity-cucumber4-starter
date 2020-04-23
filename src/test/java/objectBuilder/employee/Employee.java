@@ -5,7 +5,8 @@ public class Employee {
         private final String firstName; // required
         private String middleName; // optional
         private final String lastName; // required
-        private final Integer empId;
+        private final Integer empId; /** Octal Integer*/
+        private Boolean createLoginDetails;
         private String username;
         private String password;
         private Boolean status;
@@ -15,6 +16,7 @@ public class Employee {
             this.lastName = builder.lastName;
             this.middleName = builder.middleName;
             this.empId = builder.empId;
+            this.createLoginDetails = builder.createLoginDetails;
             this.username = builder.username;
             this.password = builder.password;
             this.status = builder.status;
@@ -33,6 +35,9 @@ public class Employee {
         public Integer getEmpId() {
             return empId;
         }
+        public Boolean getCreateLoginDetails() {
+            return createLoginDetails;
+        }
         public String getUsername() {
             return username;
         }
@@ -45,7 +50,7 @@ public class Employee {
 
         @Override
         public String toString() {
-            return "Employee: "+this.firstName+", "+this.middleName+", "+this.lastName+", "+this.empId+", "+this.username+", "+this.password+", "+this.status;
+            return "Employee: "+this.firstName+", "+this.middleName+", "+this.lastName+", "+this.empId+", "+this.createLoginDetails+", "+this.username+", "+this.password+", "+this.status;
         }
 
         public static class EmployeeBuilder
@@ -54,6 +59,7 @@ public class Employee {
             private String middleName;
             private final String lastName;
             private Integer empId;
+            private Boolean createLoginDetails;
             private String username;
             private String password;
             private Boolean status;
@@ -68,6 +74,10 @@ public class Employee {
             }
             public EmployeeBuilder empId(Integer empId) {
                 this.empId = empId;
+                return this;
+            }
+            public EmployeeBuilder createLoginDetails(Boolean createLoginDetails) {
+                this.createLoginDetails = createLoginDetails;
                 return this;
             }
             public EmployeeBuilder username(String username) {
