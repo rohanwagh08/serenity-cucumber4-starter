@@ -11,12 +11,12 @@ public class LoginPage {
     public void open_application(){
         lp.open();
     }
-    @Step("Enter {String} as username")
+    @Step("Enter {0} as username")
     public void enter_username(String username){
         lp.enter_username(username);
 
     }
-    @Step("Enter {String} as password")
+    @Step("Enter {0} as password")
     public void enter_password(String password){
         lp.enter_password(password);
     }
@@ -26,7 +26,7 @@ public class LoginPage {
     }
 
     @Step("Verify invalid login")
-    public void check_login(){
+    public void verify_invalid_login(){
         lp.vertify_invalid_login();
     }
 

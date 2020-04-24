@@ -1,7 +1,7 @@
 package pages;
 
 import net.serenitybdd.core.pages.PageObject;
-import objectBuilder.employee.Employee;
+import objectBuilder.OHRM_Objects.Employee.Employee;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.Select;
 

@@ -1,4 +1,4 @@
-package objectBuilder.employee;
+package objectBuilder.OHRM_Objects.Employee;
 
 public class Employee {
 

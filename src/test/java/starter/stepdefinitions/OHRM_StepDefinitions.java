@@ -27,7 +27,7 @@ public class OHRM_StepDefinitions {
         lp.open_application();
     }
 
-    @When("User enters {string} as username and {string} as password and hit enter")
+    @When("User enters {} as username and {} as password and hit enter")
     public void userEntersAsUsernameAndAsPasswordAndHitEnter(String username, String password) {
         lp.enter_username(username);
         lp.enter_password(password);
@@ -36,15 +36,13 @@ public class OHRM_StepDefinitions {
 
     @Then("user should be able to see dashboard")
     public void user_should_be_able_to_see_dashboard() {
-
         dp.verify_login();
     }
 
 
     @Then("user should be able to see Invalid credentials alert")
     public void user_should_be_able_to_see_Invalid_credentials_alert() {
-
-
+        lp.verify_invalid_login();
     }
 
 
