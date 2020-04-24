@@ -1,14 +1,13 @@
 package steps;
 
 import net.thucydides.core.annotations.Step;
-import org.openqa.selenium.By;
-import org.openqa.selenium.support.ui.Select;
 import pages.OHRM_EmployeeListPage;
 
-public class EmployeeListPage {
+public class AddEmployee {
+
     OHRM_EmployeeListPage elp;
     @Step
-    public void add_employee(){
+    public void add(){
         elp.click_add_employee();
         elp.enter_first_name();
         elp.enter_middle_name();

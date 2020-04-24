@@ -6,62 +6,60 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import net.thucydides.core.annotations.Steps;
 import org.junit.Assert;
-import steps.DashBoardPage;
-import steps.EmployeeListPage;
-import steps.LoginPage;
+import steps.*;
 
 
 public class OHRM_StepDefinitions {
 
     @Steps
-    LoginPage lp;
+    Login login;
 
     @Steps
-    DashBoardPage dp;
+    Navigate navigateTo;
 
     @Steps
-    EmployeeListPage elp;
+    AddEmployee addEmployee;
 
     @Given("User is on the OrangeHRM Login page")
     public void user_is_on_the_OrangeHRM_Login_page() {
-        lp.open_application();
+        login.open_application();
     }
 
-    @When("User enters {} as username and {} as password and hit enter")
+    @When("User enters {string} as username and {string} as password and hit enter")
     public void userEntersAsUsernameAndAsPasswordAndHitEnter(String username, String password) {
-        lp.enter_username(username);
-        lp.enter_password(password);
-        lp.click_submit();
+        login.enter_username(username);
+        login.enter_password(password);
+        login.click_submit();
     }
 
     @Then("user should be able to see dashboard")
     public void user_should_be_able_to_see_dashboard() {
-        dp.verify_login();
+        login.verify_valid_login();
     }
 
 
     @Then("user should be able to see Invalid credentials alert")
     public void user_should_be_able_to_see_Invalid_credentials_alert() {
-        lp.verify_invalid_login();
+        login.verify_invalid_login();
     }
 
 
     @Given("User is logged in to application with {string} as username and {string} as Password")
     public void userIsLoggedInToApplicationWithAsUsernameAndAsPassword(String username, String password) {
-        lp.open_application();
-        lp.enter_username(username);
-        lp.enter_password(password);
-        lp.click_submit();
+        login.open_application();
+        login.enter_username(username);
+        login.enter_password(password);
+        login.click_submit();
     }
 
     @And("User is on Employee List page")
     public void userIsOnEmployeeListPage() {
-        dp.navigate_employee_list_page();
+        navigateTo.navigate_employee_list_page();
     }
 
     @When("User adds a new Employee with create login details enabled")
     public void userAddsANewEmployeeWithCreateLoginDetailsEnabled() {
-        elp.add_employee();
+        addEmployee.add();
     }
 
     @Then("new Employee should be created")
