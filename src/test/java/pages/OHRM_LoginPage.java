@@ -21,4 +21,7 @@ public class OHRM_LoginPage extends PageObject {
     public void vertify_invalid_login(){
         Assert.assertTrue($(By.id("spanMessage")).containsText("Invalid credentials"));
     }
+    public void vertify_valid_login(){
+        //Verify
+    }
 }
